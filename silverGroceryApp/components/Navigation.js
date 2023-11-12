@@ -109,6 +109,21 @@ const ProjectNavigation = () => {
                     }}
                 //END invite page stack
                 />
+                <Stack.Screen
+                // added code
+                 //Creating the name of the page
+                 name="ListPage"
+                    //Calling the component to show on the page
+                    component={Invite}
+                    //Styling for the navigation header
+                    options={{
+                        title: "Grocery List",
+                        headerStyle: { backgroundColor: '#a0c4d1' },
+                        headerTitleStyle: { color: '#0f3d3d' },
+                        headerBackTitleStyle: { color: '#0f3d3d' },
+                        headerTintColor: '#0f3d3d'
+                    }}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     );

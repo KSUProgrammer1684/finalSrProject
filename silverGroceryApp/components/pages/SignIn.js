@@ -5,6 +5,8 @@ import { View, Text, Button, TextInput, StyleSheet, Image, KeyboardAvoidingView,
 //Import Use Naviagation Hook
 import { useNavigation } from '@react-navigation/native';
 
+import{auth} from '../firebase'; 
+
 //CREATE SignIn function
 function SignIn() {
   //CREATE the user state for the group name input
@@ -46,7 +48,7 @@ function SignIn() {
         {/* VIEW element to add space between buttons */}
         <View style={styles.spaceStyle}></View>
         {/* BUTTON to sign in and go to the list page */}
-        <Button title="SIGN IN" color='#0f3d3d' onPress={() => pageNavigation.navigate("ListPage")} />
+        <Button title="SIGN IN" color='#0f3d3d' onPress={handleSignUp} />
         {/* END button container */}
       </View>
       {/* END the content container */}
@@ -54,6 +56,20 @@ function SignIn() {
     //END return
   );
   //END SignIn Function
+}
+
+// send login info to database plus go to main content!
+const handleSignUp = () =>{
+  auth
+  .createUserNameAndPassword(userNameText, passwordText)
+  .then(userCredentials =>{
+    const user = userCredentials.user;
+    console.log(user.email); 
+  })
+
+  .catch(error => alert(error.message))
+  // TODO navigate to next page!
+  //onPress.pageNavigation.navigate("ListPage")
 }
 
 //CREATE styles
