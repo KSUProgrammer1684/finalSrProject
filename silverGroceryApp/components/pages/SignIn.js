@@ -5,7 +5,7 @@ import { View, Text, Button, TextInput, StyleSheet, Image, KeyboardAvoidingView,
 //Import Use Naviagation Hook
 import { useNavigation } from '@react-navigation/native';
 
-import{auth} from '../firebase'; 
+//import{auth} from '../firebase'; 
 
 //CREATE SignIn function
 function SignIn() {
@@ -69,7 +69,7 @@ const handleSignUp = () =>{
 
   .catch(error => alert(error.message))
   // TODO navigate to next page!
-  //onPress.pageNavigation.navigate("ListPage")
+  onPress.pageNavigation.navigate("ListPage")
 }
 
 //CREATE styles
