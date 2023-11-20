@@ -4,11 +4,8 @@ import React from "react";
 import { View, Text, Button, TextInput, StyleSheet, Image, KeyboardAvoidingView, Platform } from "react-native";
 //Import Use Naviagation Hook
 import { useNavigation } from '@react-navigation/native';
-<<<<<<< HEAD
 
 //import{auth} from '../firebase'; 
-=======
->>>>>>> parent of 885218a9 (Adding the authentication file and functionality)
 
 //CREATE SignIn function
 function SignIn() {
@@ -51,11 +48,10 @@ function SignIn() {
         {/* VIEW element to add space between buttons */}
         <View style={styles.spaceStyle}></View>
         {/* BUTTON to sign in and go to the list page */}
-<<<<<<< HEAD
         <Button title="SIGN IN" color='#0f3d3d' onPress={handleSignUp} />
-=======
+
         <Button title="SIGN IN" color='#0f3d3d' onPress={() => pageNavigation.navigate("ListPage")} />
->>>>>>> parent of 885218a9 (Adding the authentication file and functionality)
+        <Button title="SIGN IN" color='#0f3d3d' onPress={() => pageNavigation.navigate("ListPage")} />
         {/* END button container */}
       </View>
       {/* END the content container */}

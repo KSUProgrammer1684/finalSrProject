@@ -55,6 +55,9 @@ const ProjectNavigation = () => {
                     options={{
                         title: "Sign In",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 885218a9 (Adding the authentication file and functionality)
                         headerStyle: { backgroundColor: '#a0c4d1' },
                         headerTitleStyle: { color: '#0f3d3d' },
                         headerBackTitleStyle: { color: '#0f3d3d' },
@@ -109,6 +112,7 @@ const ProjectNavigation = () => {
                         headerTintColor: '#0f3d3d'
                     }}
                 //END invite page stack
+<<<<<<< HEAD
                 />
                 <Stack.Screen
                     // added code
@@ -175,6 +179,8 @@ const ProjectNavigation = () => {
                         headerTintColor: '#0f3d3d'
                     }}
                 //END invite page stack
+=======
+>>>>>>> parent of 885218a9 (Adding the authentication file and functionality)
                 />
             </Stack.Navigator>
         </NavigationContainer>
