@@ -23,7 +23,10 @@ function Landing() {
                 {/* ADDING a space between the buttons */}
                 <View style={styles.spaceStyle}></View>
                 {/* CREATE button for Registration */}
-                <Button color='#0f3d3d' title="Register" onPress={() => pageNavigation.navigate("RegisterPage")}/>
+                {/* ADDING a space between the buttons */}
+                <View style={styles.spaceStyle}></View>
+                {/* CREATE button for Registration */}
+                <Button color='#0f3d3d' title="REGISTER" onPress={() => pageNavigation.navigate("RegisterPage")}/>
                 {/* END Button Container */}
             </View>
             {/* END Content Container */}

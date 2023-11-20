@@ -4,33 +4,109 @@ import * as React from "react";
 import { NavigationContainer } from '@react-navigation/native';
 //Import createStackNavigator function
 import { createStackNavigator } from "@react-navigation/stack";
+import { AuthContext } from "./Authentication";
 
 import Landing from "./pages/Landing";
 import SignIn from "./pages/SignIn";
 import Register from "./pages/Register";
 // import  from "./pages/Register";
-// import Register from "./pages/Register";
+//import Register from "./pages/Register";
 
+import Forgot from "./pages/Forgot";
+import Invite from "./pages/Invite";
+import ListPage from "./pages/ListPage";
 
 const Stack = createStackNavigator();
 
+//Function for project naviagtion
 const ProjectNavigation = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
+                    <Stack.Screen
+                        //Creating the name of the page
+                        name="LandingPage"
+                        //Calling the component to show on the page
+                        component={Landing}
+                        //Styling for the navigation header
+                        options={{ headerShown: false, title: "Home" }}
+                    //END landing page stack
+                    />
+
+                    <Stack.Screen
+                        //Creating the name of the page
+                        name="SignInPage"
+                        //Calling the component to show on the page
+                        component={SignIn}
+                        //Styling for the navigation header
+                        options={{
+                            title: "Sign In",
+                            headerStyle: { backgroundColor: '#a0c4d1' },
+                            headerTitleStyle: { color: '#0f3d3d' },
+                            headerBackTitleStyle: { color: '#0f3d3d' },
+                            headerTintColor: '#0f3d3d'
+                        }}
+                    //END sign in page stack
+                    />
+
+                    <Stack.Screen
+                        //Creating the name of the page
+                        name="RegisterPage"
+                        //Calling the component to show on the page
+                        component={Register}
+                        //Styling for the navigation header
+                        options={{
+                            title: "Register",
+                            headerStyle: { backgroundColor: '#a0c4d1' },
+                            headerTitleStyle: { color: '#0f3d3d' },
+                            headerBackTitleStyle: { color: '#0f3d3d' },
+                            headerTintColor: '#0f3d3d'
+                        }}
+                    //END regiter page stack
+                    />
+
+                    <Stack.Screen
+                        //Creating the name of the page
+                        name="ForgotPage"
+                        //Calling the component to show on the page
+                        component={Forgot}
+                        //Styling for the navigation header
+                        options={{
+                            title: "Forgot Password",
+                            headerStyle: { backgroundColor: '#a0c4d1' },
+                            headerTitleStyle: { color: '#0f3d3d' },
+                            headerBackTitleStyle: { color: '#0f3d3d' },
+                            headerTintColor: '#0f3d3d'
+                        }}
+                    //END forgot page stack
+                    />
+
+                    <Stack.Screen
+                        //Creating the name of the page
+                        name="InvitePage"
+                        //Calling the component to show on the page
+                        component={Invite}
+                        //Styling for the navigation header
+                        options={{
+                            title: "Invite Someone",
+                            headerStyle: { backgroundColor: '#a0c4d1' },
+                            headerTitleStyle: { color: '#0f3d3d' },
+                            headerBackTitleStyle: { color: '#0f3d3d' },
+                            headerTintColor: '#0f3d3d'
+                        }}
+                    //END invite page stack
+                    />
                 <Stack.Screen
-                    name="LandingPage"
-                    component={Landing}
-                />
-                <Stack.Screen
-                    name="SignInPage"
-                    component={SignIn}
-                />
-                <Stack.Screen 
-                    name="RegisterPage"
-                    component={Register}
-                />
-            </Stack.Navigator>
+                    name="ListPage"
+                    component={ListPage}
+                    options={{
+                        title: "List Page",
+                        headerStyle: { backgroundColor: '#a0c4d1' },
+                        headerTitleStyle: { color: '#0f3d3d' },
+                        headerBackTitleStyle: { color: '#0f3d3d' },
+                        headerTintColor: '#0f3d3d'
+                    }} ></Stack.Screen>             
+                </Stack.Navigator>
         </NavigationContainer>
     );
 }
